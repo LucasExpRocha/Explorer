@@ -4,7 +4,7 @@
 </div>
 <br>
 
-<p>&nbsp;Seja bem vindo a toda minha tragetória no programa explorer, eu me chamo <strong>Lucas Exposito Rocha</strong> e é de grande felicidade te ver por aqui, aprecie e caso queira saber de algo mais basta entrar em contato:</p>
+<p>&nbsp;Seja bem vindo a toda minha tragetória no programa explorer, eu me chamo <strong>Lucas Exposito Rocha</strong> e é de grande felicidade te ver por aqui, aprecie e caso queira saber de algo mais, basta entrar em contato:</p>
 <div align="center">
   <a href="mailto:lucasexposito@gmail.com" target->
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email">
@@ -28,8 +28,10 @@
 <br>
 <hr>
 
-**Stage 1**
-Em breve
+<p><strong>Stage 01</strong></p>
+<p>O que aprendemos aqui? Aprendemos os conceitos basicos sobre programação, o que é programar, como funciona a WEB, os conceitos entre Front-end e Back-end</p>
+
+<br>
 **Stage 2**
 Em breve
 **Stage 3**
