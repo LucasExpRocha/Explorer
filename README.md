@@ -36,4 +36,5 @@
 <br>
 <ui>
     <li><a href="./Stage02/Corrigindo_bugs-01">Corrigindo_bugs-01</a></li>
+    <li><a href="./Stage02/Corrigindo_bugs-02">Corrigindo_bugs-02</a></li>
 </ui>
