@@ -32,9 +32,10 @@
 <p>O que aprendemos aqui? Aprendemos os conceitos basicos sobre programação, o que é programar, como funciona a WEB, os conceitos entre Front-end e Back-end</p>
 <br>
 <p><strong>Stage 02</strong></p>
-<p>O que aprendemos aqui? Aprendemos os conceitos basicos sobre HTML, como fazer um html bem estruturado, como organizar com CSS, como funciona o HTML e o CSS</p>
+<p>O que aprendemos aqui? Aprendemos os conceitos basicos sobre HTML e CSS, como fazer um html bem estruturado, como organizar com CSS, como funciona o HTML e o CSS</p>
 <br>
 <ui>
     <li><a href="./Stage02/Corrigindo_bugs-01">Corrigindo_bugs-01</a></li>
     <li><a href="./Stage02/Corrigindo_bugs-02">Corrigindo_bugs-02</a></li>
+    <li><a href="./Stage02/Corrigindo_bugs-02">Desafio_acessibilidade</a></li>
 </ui>
