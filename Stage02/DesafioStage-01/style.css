@@ -32,7 +32,7 @@ img {
 /* Body */
 
 body {
-    grid-template-columns: 80px minmax(280px, 1fr) minmax(300px, 1fr) 80px;
+    grid-template-columns: 80px 1fr 1fr 80px;
     background: #2F2E41;
     height: 100vh;
 }
@@ -83,6 +83,7 @@ body {
 }
 
 .container_main img {
+    grid-column: 2;
     width: 100%;
 }
 
@@ -143,7 +144,7 @@ body {
     left: 20px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
     body {
         grid-template-columns: 1fr;
         padding: 50px;
