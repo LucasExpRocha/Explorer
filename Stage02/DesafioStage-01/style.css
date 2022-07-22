@@ -79,6 +79,9 @@ body {
     justify-content: stretch
 }
 
+.container_main img {
+    width: 100%;
+}
 
 .container_text {
     grid-column: 3;
@@ -118,6 +121,7 @@ body {
     color: #fff;
     font-size: 14px;
     line-height: 28px;
+    padding: 5px;
 }
 
 .line {
