@@ -38,5 +38,12 @@
     <li><a href="./Stage02/Corrigindo_bugs-01">Corrigindo_bugs-01</a></li>
     <li><a href="./Stage02/Corrigindo_bugs-02">Corrigindo_bugs-02</a></li>
     <li><a href="./Stage02/Desafio_acessibilidade">Desafio_acessibilidade</a></li>
-    li><a href="./Stage02/DesafioStage-01">Desafio_01</a></li>
+    <li><a href="./Stage02/DesafioStage-01">Desafio_01</a></li>
 </ui>
+<p><strong>Stage 03</strong></p>
+<p>O que aprendemos aqui? Melhoramos os nossos conceitos e conhecimentos em relação ao HTML e CSS, vimos formularios, responsividade, entre outros... de uma olhadinha :smile:</p>
+
+<ui>
+  <li><a href="./Stage03/Formulario-01">Formulario-01</a></li>
+</ui>
+

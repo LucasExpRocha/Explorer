@@ -121,6 +121,12 @@ input {
     border-radius: 8px;
     border: 1px solid #E6E6F0;
     margin-bottom: 16px;
+    opacity: .9;
+}
+
+input:hover {
+    opacity: 1;
+    border: 1px solid #babac2;
 }
 
 .first_class, .second_class {
@@ -129,5 +135,33 @@ input {
 
 label > span {
     color: #b7b4bd;
+}
+
+.button {
+    background: #535971;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 130px;
+    
+    margin-bottom: 150px;
+    border-radius: 0 0 16px 16px;
+}
+
+.button input{
+    width: 608px;
+    padding: 15px;
+    border-radius: 20px;
+
+    background: #FF5374;
+    opacity: .9;
+
+    color: #fff;
+
+}
+
+.button input:hover {
+    opacity: 1;
 }
 
