@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form_container">
+        <header>
+            <h1 class="title font-title">Mentoria</h1>
+            <h3 class="subtitle font-subtitle">Preencha o formulário abaixo para agendar a sua mentoria</h3>
+        </header>
+        <form action="" method="post" class="init_form">
+            <fieldset>
+                <div class="personal ">
+                    <legend class="title_form font-title">Informações pessoais</legend>
+
+                    <div class="flex">
+
+                        <div class="input-wrapper">
+
+                            <label for="event-name">Nome</label>
+                            <input type="text" id="event-name">
+                        </div>
+
+                        <div class="input-wrapper">
+
+                            <label for="event-lastname">Sobrenome</label>
+                            <input type="text" id="event-lastname">
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+
+                        <label for="email">Email <span>(digite um email válido)</span></label>
+                        <input type="email" id="email">
+                    </div>
+                </div>
+
+                <div class="mentor">
+                    <legend class="mentorName font-title">Informações do Mentor</legend>
+
+                    <div class="input-wrapper">
+
+                        <label for="tutorName">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+                        <input type="text" id="tutorName">
+                    </div>
+                </div>
+
+                <div class="my_time ">
+                    <legend class="time_title font-title">Seus horários disponíveis</legend>
+                    <div class="first">
+                        <legend class="first_class font-title">Primeira mentoria</legend>
+
+                        <div class="flex">
+
+                            <div class="input-wrapper">
+
+                                <label for="dataOne">Data</label>
+                                <input type="date" id="dataOne">
+                            </div>
+                            <div class="input-wrapper">
+
+                                <label for="inOne">De</label>
+                                <input type="time" id="inOne">
+                            </div>
+                            <div class="input-wrapper">
+
+                                <label for="untilOne">Até</label>
+                                <input type="time" id="untilOne">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="second">
+                        <legend class="second_class font-title">Segunda mentoria</legend>
+                        <div class="flex">
+
+                            <div class="input-wrapper">
+
+                                <label for="dataTwo">Data</label>
+                                <input type="date" id="dataTwo">
+                            </div>
+                            <div class="input-wrapper">
+
+                                <label for="inTwo">De</label>
+                                <input type="time" name="" id="inTwo">
+                            </div>
+                            <div class="input-wrapper">
+
+                                <label for="untilTwo">Até</label>
+                                <input type="time" name="" id="untilTwo">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </fieldset>
+        </form>
+
+
+
+
+    </div>
+</body>
+
+</html>
