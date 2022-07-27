@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+
+body {
+    background: #BFD7E4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body::before {
+    content: '';
+    background: #293241;
+
+    width: 100%;
+    height: 465px;
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/* Fonts */
+
+.title {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+}
+
+.font-popins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .title {
+    color: #fff;
+
+    font-size: 36px;
+    line-height: 45px;
+
+    margin-top: 107px;
+}
+
+header p {
+    color: #fff;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    margin-bottom: 26px;
+}
+header svg {
+    margin-bottom: 32px;
+}
+
+/* Body */
+
+/* Personal Info */
+
+main {
+    background: #fff;
+
+    min-height: 320px;
+    width: 750px;
+
+    border-radius: 20px;
+    margin-bottom: 100px;    
+}
+
+.info_person {
+    border: none;
+}
+
+.info_person legend {
+    padding: 48.5px;
+
+    font-size: 24px;
+    line-height: 34px;
+    
+    text-align: center;
+
+    background: #F67669;
+
+    width: 100%;
+
+    border-radius: 20px 20px 0 0;
+}
+
+.input_container {
+    padding: 0 64px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.fullName {
+    display: flex;
+
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.fullName input{
+    width: 300px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #4E4958;
+}
+
+.input-wrapper input {
+    height: 55px;
+    padding: 10px;
+
+    background-color: #FAFAFC;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+input:hover,
+#description:hover,
+#mentor:hover,
+.checkbox:hover {
+    opacity: 1;
+    border: 1px solid #babac2;
+}
+
+/* Mentor info */
+
+.info_mentor,
+.next_mentorship {
+    margin-top: 32px;
+
+    padding: 0 64px;
+
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info_mentor legend,
+.next_mentorship legend {
+    font-size: 24px;
+    line-height: 34px;
+
+    padding: 8px;
+    
+    text-align: center;
+
+    border-bottom: 1px solid #E6E6F0;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.input-wrapper select {
+    height: 55px;
+    padding: 10px;
+
+    background-color: #FAFAFC;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+}
+
+.input-wrapper textarea {
+    display: block;
+
+    max-width: 625px;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+
+    padding: 8px;
+}
+
+.checkbox {
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox label {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    font-size: 14px;
+    margin: 0;
+}
+
+.checkbox input {
+    position: absolute; 
+    z-index: -1;
+
+    padding: 24px;
+    opacity: 0 ;
+}
+
+.checkbox label::before {
+    content: '';
+
+    width: 24px;
+    height: 24px;
+
+    display: block;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.checkbox input:checked + label::before {
+    background: rgb(47, 233, 102);
+}
+
+/* Next mentorhip */
+
+.three_columns {
+    display: flex;
+
+    gap: 20px;
+}
+
+.date {
+    width: 300px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 130px;
+    
+    border-radius: 0 0 16px 16px;
+}
+
+.button input{
+    width: 608px;
+    padding: 20px;
+    border-radius: 20px;
+
+    background: #F67669;
+    opacity: .9;
+
+    color: #fff;
+
+}
+
+.button input:hover {
+    opacity: 1;
+}
