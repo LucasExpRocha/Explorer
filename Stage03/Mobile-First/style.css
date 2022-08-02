@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Staatliches', cursive;
+    --fc-primary: hsl(232, 0%, 100%);
+    --fc-secondary: hsl(232, 17%, 35%);
+
+    --bg-primary: hsl(218, 17%, 62%);
+    --bg-secondary: hsl(233, 100%, 97%);
+    --bg-font: hsl(275, 18%, 79%);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+body {
+    width: clamp(28rem, 28 + 50vw, 128rem);
+    padding: 5rem;
+
+    margin: 0 auto;
+
+    background: var(--bg-secondary);
+}
+
+header::before {
+    content: '';
+    
+    width: 100%;
+    height: 29rem;
+
+    top: 0;
+    left: 0;
+
+    position: absolute;
+    z-index: -1;
+
+    background: var(--bg-primary);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    width: 15rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    font-family: var(--ff-primary);
+    color: var(--fc-primary);
+    font-size: 4rem;
+    line-height: 3.4rem;
+
+    letter-spacing: 3px;
+
+    background-color: var(--bg-font);
+
+    padding: 10px 100%;
+    margin-bottom: 5rem;
+
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+
+}
+
+header p {
+    font-size: 2rem;
+    text-align: center;
+
+    margin-bottom: 6rem;
+}
+
+main {
+    display: grid;
+    gap: 3.6rem;
+}
+
+main div {
+    position: relative;
+    border-radius: 25px;
+
+    animation: card 700ms backwards;
+}
+
+main img {
+    opacity: 0.9;
+    transition: 300ms;
+
+    border-radius: 25px;
+}
+
+main img:hover {
+    opacity: 1;
+
+    box-shadow: 5px 5px var(--bg-primary);
+}
+
+main span {
+    position: absolute;
+    z-index: 1;
+    right: 1.6rem;
+    top: 1.6rem;
+
+    font-size: 2rem;
+    letter-spacing: 5%;;
+    line-height: 3.4rem;
+    text-transform: uppercase;
+    font-family: var(--ff-primary);
+    color: var(--fc-secondary);
+
+    padding: 1px 2.4rem;
+    border-radius: 20px;
+    background-color: var(--bg-secondary);
+
+    animation: topdown 700ms 350ms backwards;
+}
+
+@keyframes card {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
