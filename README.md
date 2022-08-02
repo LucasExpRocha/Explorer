@@ -45,5 +45,7 @@
 
 <ui>
   <li><a href="./Stage03/Formulario-01">Formulario-01</a></li>
+  <li><a href="./Stage03/Formulario-02">Formulario-02</a></li>
+  <li><a href="./Stage03/Mobile-First">Desafio Mobile first</a></li>
 </ui>
 
