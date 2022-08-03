@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    object-fit: cover;
 }
 
 :root {
@@ -104,14 +105,14 @@ main div {
 }
 
 main img {
-    opacity: 0.9;
+    filter: brightness(0.8);
     transition: 300ms;
 
     border-radius: 25px;
 }
 
 main img:hover {
-    opacity: 1;
+    filter: brightness(1);
 
     transform: scale(1.05);
 }
@@ -150,6 +151,8 @@ footer p {
         grid-template-columns: 1fr 3fr;
 
         padding: 0;
+
+        height: 100vh;
     }
 
     header {
@@ -219,7 +222,7 @@ footer p {
     }
 
     main img {
-        overflow: hidden;
+        height: 100%;
     }
 
     footer {
