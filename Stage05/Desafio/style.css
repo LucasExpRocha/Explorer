@@ -112,6 +112,7 @@ main {
 
 .card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -124,6 +125,15 @@ main {
     transition: 200ms;
 
     background: var(--first-card-color);
+
+    position: relative;
+}
+
+.card input {
+    margin-bottom: 3rem;
+    bottom: -20px;
+
+    position: absolute;
 }
 
 .card:hover {
