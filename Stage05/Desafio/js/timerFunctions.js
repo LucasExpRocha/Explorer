@@ -1,4 +1,13 @@
 import { audioFunctions } from './audioFunctions.js';
+import { variables } from './variables.js';
+
+
+const {
+    buttonPause,
+    buttonPlay,
+    buttonSet,
+    buttonStop
+} = variables;
 
 let audio = audioFunctions({})
 
@@ -10,6 +19,13 @@ export function timerFunction({
     let seconds = document.querySelector('.seconds').textContent;
     let instantSeconds = document.querySelector('.seconds').textContent;
     let timerOut;
+
+    const resetControls = () => {
+        buttonPlay.classList.remove('hidden')
+        buttonPause.classList.add('hidden')
+        buttonSet.classList.remove('hidden')
+        buttonStop.classList.add('hidden')
+    }
 
     const updateTextContent = (minutes, seconds) => {
         minutesDisplay.textContent = String(minutes).padStart(2, '0');
@@ -56,6 +72,7 @@ export function timerFunction({
             let functionSeconds = Number(document.querySelector('.seconds').textContent)
 
             if (functionMinutes <= 0 && functionSeconds <= 0) {
+                resetControls();
                 pauseCountdown();
                 resetTextContent();
                 audio.timeEnd()

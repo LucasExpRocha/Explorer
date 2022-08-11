@@ -25,6 +25,7 @@
     --box-dark: hsla(var(--color), 100%, 0%, .2);
 
     --bg-scroll: hsla(var(--color), 80%, 30%, 0.5);
+    --scroll: hsl(var(--color), 87%, 27%)
 
 }
 
@@ -195,7 +196,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 10px;
     width: 20px;
     border-radius: 7px;
-    background: var(--font-color-dark);
+    background: var(--scroll);
     cursor: pointer;
     -webkit-appearance: none;
 }
