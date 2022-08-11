@@ -13,7 +13,12 @@ const   buttonPlay = document.querySelector('.buttonPlay'),
         volumeSoundFlorest = document.querySelector('#volumeSoundFlorest'),
         volumeSoundRain = document.querySelector('#volumeSoundRain'),
         volumeSoundPeoples = document.querySelector('#volumeSoundPeoples'),
-        volumeSoundFire = document.querySelector('#volumeSoundFire');
+        volumeSoundFire = document.querySelector('#volumeSoundFire'),
+        changeTheme = document.querySelector('header'),
+        sunIcon = document.querySelector('.sun'),
+        moonIcon = document.querySelector('.moon'),
+        bodyClass = document.querySelector('body');
+
 
     const florestAudio = new Audio("./audio/florest.wav")
     const rainAudio = new Audio('./audio/rain.wav')
@@ -44,5 +49,9 @@ export const variables = {
     peoplesAudio,
     fireAudio,
     buttonPressAudio,
-    kitchenTimer
+    kitchenTimer,
+    changeTheme,
+    bodyClass,
+    sunIcon,
+    moonIcon
 }

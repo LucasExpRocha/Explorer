@@ -20,10 +20,21 @@ const {
     florestAudio,
     rainAudio,
     peoplesAudio,
-    fireAudio
+    fireAudio,
+    changeTheme,
+    bodyClass,
+    sunIcon,
+    moonIcon
 } = variables
 
 export default function({timer, audio}){
+
+    changeTheme.addEventListener('click', () => {
+        bodyClass.classList.toggle('Dark')
+        sunIcon.classList.toggle('hidden')
+        moonIcon.classList.toggle('hidden')
+
+    })
 
     buttonPlay.addEventListener('click', () => {
         audio.playAudio(buttonPressAudio)
