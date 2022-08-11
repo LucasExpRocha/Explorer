@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+:root{
+    font-size: 62.5%;
+
+    --hue: 194;
+
+    --bg-color: hsl(var(--hue), 0%, 100%);
+    --bg-color-secundary: hsla(var(--hue), 100%, 100%, .05);
+
+    --first-card-color: hsla(var(--hue), 100%, 100%, .2);
+    --second-card-color: hsla(var(--hue), 80%, 43%, .8);
+
+    --button-color: hsl(var(--hue), 100%, 43%);
+
+    --font-color: hsl(var(--hue), 39%, 11%);
+    --font-color-light: hsl(var(--hue), 11%, 93%);
+
+    --box-dark: hsla(var(--hue), 100%, 0%, .2);
+
+
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*  */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background: var(--bg-color);
+}
+
+main {
+    display: grid;
+    grid-template-areas: "container_countdown container_sounds";
+    grid-template-columns: 50%;
+    justify-content: space-between;
+
+    width: 90rem;
+    padding: 3rem;
+    gap: 5rem;
+
+    border-radius: 3rem;
+
+    background: var(--bg-color-secundary);
+    box-shadow: 0 1.5rem 3.5rem var(--box-dark);
+    border: 1px solid var(--box-dark);
+}
+
+.container_countdown {
+    grid-area: container_countdown;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_time_counter span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.5rem;
+    font-weight: 500;
+
+    line-height: 15rem;
+}
+
+.countainer_controls_timer_counter {
+    display: flex;
+    gap: 3rem;
+}
+
+.button-timer {
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+
+    width: 48px;
+    height: 48px;
+
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.button-timer:hover{
+    box-shadow: 0 1.5rem 3.5rem hsla(var(--hue), 100%, 0%, .3);
+
+    fill: var(--button-color);
+}
+
+.container_sounds {
+    grid-area: container_sounds;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 15rem;
+    height: 15rem;
+
+    border-radius: 2rem;
+    border: 1px solid var(--box-dark);
+
+    transition: 200ms;
+
+    background: var(--first-card-color);
+}
+
+.card:hover {
+    fill: var(--bg-color);
+    background: var(--second-card-color);
+
+    box-shadow: 0 1.5rem 3.5rem var(--box-dark);
+    
+    cursor: pointer;
+}
+
+.active {
+    fill: var(--bg-color);
+    background: var(--second-card-color);
+    
+    cursor: pointer;
+} 
