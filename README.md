@@ -54,7 +54,7 @@
 
 <ui>
   <li><a href="./Stage04/Exercicio01">Exercicio-01</a></li>
-  <li><a href="./Stage04/Exercicio01">Exercicio-02</a></li>
+  <li><a href="./Stage04/Exercicio02">Exercicio-02</a></li>
 </ui>
 
 <p><strong>Stage 05</strong></p>
