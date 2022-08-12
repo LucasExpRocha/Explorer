@@ -57,3 +57,10 @@
   <li><a href="./Stage04/Exercicio01">Exercicio-02</a></li>
 </ui>
 
+<p><strong>Stage 05</strong></p>
+<p>Neste stage avançamos um pouco mais no javascript, aprendemos usar o type:module do HTML e a utilizar factory no javascript entre outros. :smile:</p>
+
+<ui>
+  <li><a href="./Stage04/Exercicio01">Desafio Pomodoro</a></li>
+  <li><a href="#">Brevemente</a></li>
+</ui>
