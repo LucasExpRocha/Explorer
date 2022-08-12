@@ -163,14 +163,14 @@ export default function({timer, audio}){
     })
 
     volumeSoundRain.addEventListener('click', () => {
-        rainAudio.volume = volumeSoundFlorest.value
+        rainAudio.volume = volumeSoundRain.value
     })
 
     volumeSoundPeoples.addEventListener('click', () => {
-        peoplesAudio.volume = volumeSoundFlorest.value
+        peoplesAudio.volume = volumeSoundPeoples.value
     })
 
     volumeSoundFire.addEventListener('click', () => {
-        fireAudio.volume = volumeSoundFlorest.value
+        fireAudio.volume = volumeSoundFire.value
     })
 }
