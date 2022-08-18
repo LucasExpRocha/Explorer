@@ -158,19 +158,19 @@ export default function({timer, audio}){
         soundFire.classList.contains('active') ? audio.playAudio(fireAudio) : audio.stopAudio(fireAudio)
     })
 
-    volumeSoundFlorest.addEventListener('click', () => {
+    volumeSoundFlorest.addEventListener('change', () => {
         florestAudio.volume = volumeSoundFlorest.value
     })
 
-    volumeSoundRain.addEventListener('click', () => {
+    volumeSoundRain.addEventListener('change', () => {
         rainAudio.volume = volumeSoundRain.value
     })
 
-    volumeSoundPeoples.addEventListener('click', () => {
+    volumeSoundPeoples.addEventListener('change', () => {
         peoplesAudio.volume = volumeSoundPeoples.value
     })
 
-    volumeSoundFire.addEventListener('click', () => {
+    volumeSoundFire.addEventListener('change', () => {
         fireAudio.volume = volumeSoundFire.value
     })
 }
