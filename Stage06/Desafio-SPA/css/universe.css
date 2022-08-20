@@ -1,0 +1,12 @@
+.container-universe {
+    padding: 10.2rem;
+
+    display: grid;
+    gap: 1.6rem;
+}
+
+@media (max-width: 500px) {
+    .container-universe {
+        padding: 4rem;
+    }
+}

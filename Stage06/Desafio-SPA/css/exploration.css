@@ -1,0 +1,12 @@
+.container-exploration {
+    padding: 10.2rem;
+
+    display: grid;
+    gap: 1.6rem;
+}
+
+@media (max-width: 500px) {
+    .container-exploration {
+        padding: 4rem;
+    }
+}

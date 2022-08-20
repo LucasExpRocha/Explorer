@@ -49,6 +49,7 @@
   <li><a href="./Stage03/Mobile-First">Desafio Mobile first</a></li>
 </ui>
 <br>
+
 <p><strong>Stage 04</strong></p>
 <p>O que aprendemos aqui? Começamos a ver alguns conceitos sobre o JavaScript e executamos alguns projetos, vimos objetos, arrays, metodos dos arrays entre varias outras coisas legais. :smile:</p>
 
@@ -56,11 +57,20 @@
   <li><a href="./Stage04/Exercicio01">Exercicio-01</a></li>
   <li><a href="./Stage04/Exercicio02">Exercicio-02</a></li>
 </ui>
+<br>
 
 <p><strong>Stage 05</strong></p>
 <p>Neste stage avançamos um pouco mais no javascript, aprendemos usar o type:module do HTML e a utilizar factory no javascript entre outros. :smile:</p>
 
 <ui>
   <li><a href="./Stage05/Desafio">Desafio Pomodoro</a></li>
-  <li><a href="#">Brevemente</a></li>
+  <li><a href="./Stage05/Desafio-IMC">Desafio IMC</a></li>
+</ui>
+<br>
+
+<p><strong>Stage 06</strong></p>
+<p>Neste stage avançamos um pouco mais, aprendemos como funciona uma SPA, como utilizar classes, orientação a objetos. :smile:</p>
+
+<ui>
+  <li><a href="./Stage06/Desafio-SPA">Desafio SPA</a></li>
 </ui>
