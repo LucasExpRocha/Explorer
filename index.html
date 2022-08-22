@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Github Explorer</title>
+    
+    <link rel="shortcut icon" href="./assets/explorer.svg" type="image/svg">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container_navigation flex">
+            <a class="nav_link select" href="#">Inicio</a>
+            <a class="nav_link" href="#About">Sobre</a>
+            <a class="nav_link" href="#Projects">projetos</a>
+        </nav>
+        <div class="container_title_header flex">
+            <h1 class="title">Minha trajetória no <span><a href="https://www.rocketseat.com.br/explorer" target="_blank"><q>Explorer</q> </a></span></h1>
+            <a class="button_nav" href="#About">Vamos lá?</a>
+        </div>
+        <img src="./assets/background-header-6.jpg" alt="background-header" class="background-header" />
+    </header>
+
+    <main>
+        <section id="About">
+            <h1 class="section_title">Sobre</h1>
+            <div class="container_cards flex">
+                <div class="container">
+                    <h3 class="about-title">Sobre o curso</h3>
+                    <blockquote cite="https://www.rocketseat.com.br/explorer">
+                        <p class="description-stage">O <strong>Explorer</strong> contém tudo o que você precisa para desenvolver habilidades técnicas e comportamentais, iniciar uma carreira sólida na programação e se tornar um destaque.</p>
+                        <p class="description-stage">O Explorer foi criado com um método inteligente e eficiente para te ajudar a evoluir habilidades técnicas e comportamentais específicas que farão de você um profissional pronto para lidar com desafios do mundo real.</p>
+                    </blockquote>
+                </div>
+                <div class="container">
+                    <h3 class="about-title">Sobre mim</h3>
+                    <p class="description-stage">
+                        Meu nome é <strong>Lucas E. Rocha</strong>, sou um amante da tecnologia que se apaixonou pela arte do front-end, desde então venho em busca de me especializar.
+                    </p>
+                    <p class="description-stage">O estudo me transformou, graças a minha grande força de vontade de aprender, não me contentando com <q>Não vai dar</q>, <q>É impossível</q>, eu venho evoluindo cada dia mais.</p>
+
+                </div>
+            </div>
+        </section>
+        <section id="Projects" class="">
+            <h1 class="section_title">Projetos</h1>
+
+            <!-- STAGE 01 -->
+
+            <div class="container-project-left">
+                <div class="projectLeft card_project">
+                    <h3 class="stage-title">Stage 01</h3>
+                    <p class="description-stage"><strong>O que aprendemos aqui?</strong>  Aprendemos os conceitos basicos sobre programação, o que é programar, como funciona a WEB, os conceitos entre Front-end e Back-end</p>
+                </div>
+            </div>
+
+            <!-- STAGE 02 -->
+    
+            <div class="container-project-right">
+                <div class="projectRight card_project">
+                    <h3 class="stage-title">Stage 02</h3>
+                    <p class="description-stage"><strong>O que aprendemos aqui?</strong> Aprendemos os conceitos basicos sobre HTML e CSS, como fazer um html bem estruturado, como organizar com CSS, como funciona o HTML e o CSS</p>
+                    <a class="openModal" onclick="openModal('.stage02modal')"><p>VER MAIS &nbsp&nbsp→</p></a>
+                </div>
+                <div class="modal-wrapper stage02modal">
+                    <div class="grid modal stage02modal">
+                        <i class="uis uis-multiply btn_close" onclick="closeModal()"></i>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage01-Desafio01.jpg" alt="Imagem do desafio 1 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage02/Corrigindo_bugs-01">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage02/Corrigindo_bugs-01">PAGE</a>
+                            </div>
+                        </div>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage01-Desafio02.jpg" alt="Imagem do desafio 2 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage02/Corrigindo_bugs-02">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage02/Corrigindo_bugs-02">PAGE</a>
+                            </div>
+                        </div>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage01-Desafio02.jpg" alt="Imagem do desafio 3 Stage 1">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage02/Desafio_acessibilidade">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage02/Desafio_acessibilidade">PAGE</a>
+                            </div>
+                        </div>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage01-Desafio04.jpg" alt="Imagem do desafio 4 Stage 1">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage02/DesafioStage-01">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage02/DesafioStage-01">PAGE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE 03 -->
+
+            <div class="container-project-left">
+                <div class="projectLeft card_project">
+                    <h3 class="stage-title">Stage 03</h3>
+                    <p class="description-stage"><strong>O que aprendemos aqui?</strong>   Melhoramos os nossos conceitos e conhecimentos em relação ao HTML e CSS, vimos formularios, responsividade, entre outros... de uma olhadinha</p>
+                    <a class="openModal" onclick="openModal('.stage03modal')"><p>VER MAIS &nbsp&nbsp→</p></a>
+                </div>
+                <div class="modal-wrapper stage03modal">
+                    <div class="grid modal stage03modal">
+                        <i class="uis uis-multiply btn_close" onclick="closeModal()"></i>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage03-Desafio01.jpg" alt="Imagem do desafio 1 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage03/Formulario-01">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage03/Formulario-01/">PAGE</a>
+                            </div>
+                        </div>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage03-Desafio02.jpg" alt="Imagem do desafio 2 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage03/Formulario-02">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage03/Formulario-02/">PAGE</a>
+                            </div>
+                        </div>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage03-Desafio03.jpg" alt="Imagem do desafio 3 Stage 1">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage03/Mobile-First">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage03/Mobile-First/">PAGE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE 04 -->
+    
+            <div class="container-project-right">
+                <div class="projectRight card_project">
+                    <h3 class="stage-title">Stage 04</h3>
+                    <p class="description-stage"><strong>O que aprendemos aqui?</strong> Começamos a ver alguns conceitos sobre o JavaScript e executamos alguns projetos, vimos objetos, arrays, metodos dos arrays entre varias outras coisas legais</p>
+                    <a class="openModal" onclick="openModal('.stage04modal')"><p>VER MAIS &nbsp&nbsp→</p></a>
+                </div>
+                <div class="modal-wrapper stage04modal">
+                    <div class="grid modal stage04modal">
+                        <i class="uis uis-multiply btn_close" onclick="closeModal()"></i>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage04-Desafio01.jpg" alt="Imagem do desafio 1 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage04/Exercicio01">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage04/Exercicio01">PAGE</a>
+                            </div>
+                        </div>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage04-Desafio02.jpg" alt="Imagem do desafio 2 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage04/Exercicio02">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage04/Exercicio02">PAGE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE 05 -->
+
+            <div class="container-project-left">
+                <div class="projectLeft card_project">
+                    <h3 class="stage-title">Stage 05</h3>
+                    <p class="description-stage"><strong>O que aprendemos aqui?</strong>   Neste stage avançamos um pouco mais no javascript, aprendemos usar o type:module do HTML e a utilizar factory no javascript entre outros</p>
+                    <a class="openModal" onclick="openModal('.stage05modal')"><p>VER MAIS &nbsp&nbsp→</p></a>
+                </div>
+                <div class="modal-wrapper stage05modal">
+                    <div class="grid modal stage05modal">
+                        <i class="uis uis-multiply btn_close" onclick="closeModal()"></i>
+                        <div class="container_modal_project">
+                            <h1 class="title">Project1</h1>
+                            <img src="./assets/projects/Stage05-Desafio01.jpg" alt="Imagem do desafio 1 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage05/Desafio">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage05/Desafio">PAGE</a>
+                            </div>
+                        </div>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage05-Desafio02.jpg" alt="Imagem do desafio 2 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage05/Desafio-IMC">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage05/Desafio-IMC">PAGE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAGE 06 -->
+    
+            <div class="container-project-right">
+                <div class="projectRight card_project">
+                    <h3 class="stage-title">Stage 06</h3>
+                    <p class="description-stage"><strong>O que aprendemos aqui?</strong> Neste stage avançamos um pouco mais, aprendemos como funciona uma SPA, como utilizar classes, orientação a objetos.</p>
+                    <a class="openModal" onclick="openModal('.stage06modal')"><p>VER MAIS &nbsp&nbsp→</p></a>
+                </div>
+                <div class="modal-wrapper stage06modal">
+                    <div class="grid modal stage06modal">
+                        <i class="uis uis-multiply btn_close" onclick="closeModal()"></i>
+                        <div class="container_modal_project">
+                            <img src="./assets/projects/Stage01-Desafio01.jpg" alt="Imagem do desafio 1 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage06/Desafio-SPA">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://github.com/LucasExpRocha/Explorer/tree/main/Stage06/Desafio-SPA">EM BREVE</a>
+                            </div>
+                        </div>
+                        <!-- <div class="container_modal_project">
+                            <img src="./assets/projects/Stage01-Desafio02.jpg" alt="Imagem do desafio 2 Stage 1 error code">
+                            <div class="buttonsContainer">
+                                <a class="btn btn-code" target="_blank" href="">CODE</a>
+                                <a class="btn btn-page" target="_blank" href="https://lucasexprocha.github.io/Explorer/Stage02/Corrigindo_bugs-02">PAGE</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function openModal(event) {
+            const reqEvent = document.querySelectorAll(event)
+            reqEvent.forEach(reqEvent => {
+                reqEvent.classList.add('open');
+            });
+        }
+
+        function closeModal(event) {
+            const openModals = document.querySelectorAll(".open")
+            openModals.forEach(openModal => {
+                openModal.classList.remove('open');
+            });
+        }
+
+        window.document.onkeydown = function(evt) {
+            if (evt.key == 'Escape') closeModal()
+        }
+
+    </script>
+</body>
+</html>
