@@ -45,10 +45,18 @@ export function timerFunction({
         let userTimeMinutes = Number(prompt('Informe os minutos desejados'))
         let userTimeSeconds = Number(prompt('Informe os segundos desejados'))
         
-        updateTextContent(userTimeMinutes, userTimeSeconds)
-        
-        minutes = userTimeMinutes
-        seconds = userTimeSeconds
+        if(!notNumber(userTimeMinutes) && !notNumber(userTimeSeconds) && userTimeSeconds <= 60) {
+            updateTextContent(userTimeMinutes, userTimeSeconds)
+            
+            minutes = userTimeMinutes
+            seconds = userTimeSeconds            
+            return
+        }
+        alert('Informe apenas numeros')
+    }
+
+    const notNumber = (value) => {
+        return isNaN(value) || value == ""
     }
 
     const incrementFiveMinutes = () => {
