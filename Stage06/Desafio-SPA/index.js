@@ -1,8 +1,8 @@
 const all_Links = document.querySelectorAll('.nav-link');
 
 const routes = {
-    '/index.html': '/Explorer/blob/main/Stage06/Desafio-SPA/pages/home.html',
-    "/": "/Explorer/blob/main/Stage06/Desafio-SPA/pages/home.html",
+    '/index.html': '/pages/home.html',
+    "/": "/pages/home.html",
     "/universe": "/pages/universe.html",
     "/exploration": "/pages/exploration.html",
     404: "/pages/404.html"
