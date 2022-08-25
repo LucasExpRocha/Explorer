@@ -28,7 +28,7 @@
 <br>
 <hr>
 
-<p><strong>Page</strong> do repositório <a href="https://lucasexprocha.github.io/Explorer/">Explorer</a>:smile:</p>
+<p><strong>Page</strong> do repositório <a href="https://lucasexprocha.github.io/Explorer/">Explorer</a> :smile:</p>
 
 <p><strong>Stage 01</strong></p>
 <p>O que aprendemos aqui? Aprendemos os conceitos basicos sobre programação, o que é programar, como funciona a WEB, os conceitos entre Front-end e Back-end</p>
