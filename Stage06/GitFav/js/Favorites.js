@@ -28,21 +28,23 @@ export class Favorites {
 
     }
 
-    async add (nameFavorite) {
+    async add () {
+        const nameFavorite = document.querySelector("#input-search").value
+        const userExists = this.entries.find(entry => entry.login === nameFavorite)
+
+        if (userExists) return alert("User already exists! Please select a different")
+
         try {
             const githubUser = await Github.search(nameFavorite)
-            console.log(githubUser)
             if (githubUser.login === undefined) {
                 throw new Error(`No user found for ${nameFavorite}`)
             }
-
             this.entries = [githubUser, ...this.entries]
             this.updateTable()
             this.save()
-
-        } catch (err) {
-            alert(err)
-        }
+            } catch (err) {
+                alert(err)
+            }
     }
 
     delete (user) {
@@ -62,6 +64,12 @@ export class FavoritesView extends Favorites {
         
         this.tbody = document.querySelector('tbody')
 
+        window.document.onkeydown = (evt) => {
+            if (evt.key === 'Enter') {
+                this.add()
+            }
+        }
+
         this.updateTable();
         this.onAdd();
         this.removeNoFav();
@@ -71,11 +79,10 @@ export class FavoritesView extends Favorites {
     onAdd() {
         const addFavorite = document.querySelector(".search-button")
         addFavorite.addEventListener('click', () => {
-            const nameFavorite = document.querySelector("#input-search").value
-            this.add(nameFavorite)
+            this.add()
         })
     }
-    
+
     createRow () {
         const tr = document.createElement('tr');
 
@@ -106,6 +113,7 @@ export class FavoritesView extends Favorites {
             
             row.querySelector('.user img').src = `https://github.com/${user.login}.png`
             row.querySelector('.user img').alt = `Imagem do ${user.name}`
+            row.querySelector('.user a').href = `https://github.com/${user.login}`
             row.querySelector('.userName').textContent = user.name;
             row.querySelector('.userID').textContent = user.login;
             row.querySelector('.followers').textContent = user.followers;
