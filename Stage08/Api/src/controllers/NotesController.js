@@ -61,7 +61,6 @@ class NotesController {
         let notes;
 
         if(tags) {
-            console.log(tags);
             const filterTags = tags.split(',').map(tag => tag.trim());
 
             notes = await knex("tags")
@@ -75,7 +74,17 @@ class NotesController {
             notes = await knex("notes").where({ user_id }).whereLike("title", `%${title}%`).orderBy("title")
         }
 
-        return response.json(notes)
+        const userTags = await knex("tags").where({ user_id })
+        const noteWithTags = notes.map(note => {
+            const noteTags = userTags.filter(tag => tag.note_id === note.id)
+
+            return {
+                ...note,
+                tags: noteTags
+            }
+        })
+
+        return response.json(noteWithTags)
     }
 }
 
