@@ -4,7 +4,7 @@ const AppError = require('../utils/AppError')
 
 class UsersController {
     async create (request, response) {
-        const { userName, email, password } = request.body
+        const { userName, email, password, avatar } = request.body
 
         if(!userName) {
             throw new AppError("Nome é obrigatório.")
@@ -25,24 +25,24 @@ class UsersController {
         await knex("users").insert({
             userName, 
             email, 
-            password: hashedPassword})
+            password: hashedPassword,
+        })
 
     
         response.status(201).json('Criado com sucesso')
     }
 
     async update (request, response) {
-        const {name, email, password, old_password} = request.body;
+        const {name, email, password, avatar ,old_password} = request.body;
         const { id } = request.params;
 
-        const database = await sqliteConnection();
-        const user = await database.get("SELECT * FROM users WHERE id = (?)", [id]);
+        const user = await knex("users").where("id", "=", id)
 
         if (!user) {
             throw new AppError("Usuario não encontrado");
         }
 
-        const userWithUpdatedEmail = await database.get("SELECT * FROM users WHERE email = (?)", [email])
+        const userWithUpdatedEmail = await knex("users").where("email", "=", email)
 
         if(userWithUpdatedEmail && userWithUpdatedEmail.id !== user.id) {
             throw new AppError("Este e-mail já está em uso!")
@@ -56,7 +56,7 @@ class UsersController {
         }
 
         if(password && old_password) {
-            const checkOldPassword = await compare(old_password, user.password)
+            const checkOldPassword = await compare(old_password, user[0].password)
 
             if(!checkOldPassword) {
                 throw new AppError("A senha antiga não confere");
@@ -65,17 +65,15 @@ class UsersController {
             user.password = await hash(password, 8)
         }
 
-        await database.run(`
-            UPDATE users SET
-            name = ?,
-            email = ?,
-            password = ?,
-            avatar = ?,
-            updated_at = DATETIME('now')
-            WHERE id = ?
-        `, [user.name, user.email, user.password, user.avatar, id]);
+        await knex('users').where('id', '=', id).update({
+            userName: user.name,
+            email: user.email,
+            password: user.password,
+            avatar: avatar,
+            updated_at: knex.fn.now()
+        })
 
-        return response.json()
+        return response.json('Updated sucessfully')
 
     }
 }
