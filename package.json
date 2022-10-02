@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.4.1",
+    "styled-components": "^5.3.6"
   }
 }
