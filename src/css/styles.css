@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    font-size: 62.5%;
-
-    --ff-gorditas: 'Gorditas', cursive;
-    --ff-raleway: 'Raleway', cursive;
-}
-
 .flex {
     display: flex;
 }
@@ -24,7 +17,13 @@ a {
 }
 
 body {
-    background: black;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 5.5rem auto;
+    grid-template-areas:
+    "Header"
+    "Main";
 }
 
 image {
@@ -32,48 +31,40 @@ image {
     display: block;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* Header */
-
-
 header {
-    grid-area: header;
+    grid-area: Header;
+    width: 100%;
 
-    position: relative;
-    height: 100vh;
+    padding: 1rem 5rem;    
 
-    justify-content: center;
-    flex-direction: column;
-    
+    box-shadow: 0px -2px 4px rgba(255, 255, 255, 1);
 }
 
 .container_navigation {
-    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    justify-content: center;
-    gap: 2rem;
+.container_navigation ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
 }
 
 .nav_link {
-    font-family: var(--ff-gorditas);
-    text-decoration: none;
-    text-transform: uppercase;
-
-    font-size: 2.6rem;
+    font-size: 1rem;
     font-weight: 400;
 
     color: #fff;
 
-    transition: all 1s;
+    transition: all .2s;
+    padding: 4px;
 }
 
 .nav_link:hover {
     font-weight: 700;
-
-    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.4)
 }
 
 .nav_link.select {
@@ -81,18 +72,19 @@ header {
 }
 
 .container_title_header {
-    height: 70%;
+    display: flex;
+    height: 70vh;
 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20rem;
+    gap: 4rem;
 }
 
 .title {
     font-family: var(--ff-raleway);
 
-    font-size: 3.6rem;
+    font-size: 2.5rem;
     color: #fff;
 
     transition: all 1s;
@@ -104,11 +96,11 @@ header {
 }
 
 .button_nav {
-    padding: 2.6rem 5rem;
+    padding: 1rem 2rem;
     text-decoration: none;
 
     font-family: var(--ff-raleway);
-    font-size: 1.6rem;
+    font-size: 1rem;
 
     color: #fff;
     border: 2px solid #fff;
@@ -118,13 +110,12 @@ header {
 }
 
 .button_nav:hover {
-    padding: 2.6rem 6rem;
+    padding: 1.1rem 2.2rem;
 
-    font-size: 1.8rem;
     font-weight: 700;
 
     box-shadow: inset 3px 2px 3px #fff, inset -3px -2px 3px #fff;
-    border-radius: 4.5rem;
+    border-radius: 2rem;
 }
 
 .background-header {
@@ -141,13 +132,17 @@ header {
 /* main */
 
 main {
-    grid-area: main;
+    grid-area: Main;
+    width: 100%;
+
+    overflow-y: auto;
 }
 
 .section_title {
     font-family: var(--ff-raleway);
+    
 
-    font-size: 4.8rem;
+    font-size: 2.5rem;
 
     padding: 1.6rem;
     margin-top: 10rem;
@@ -157,13 +152,6 @@ main {
 
     color: #fff;
 
-    background-color: rgb(0, 0, 0);
-}
-
-/* ABOUT */
-
-#About {
-    display: f;
 }
 
 .container_cards {
@@ -176,11 +164,11 @@ main {
 .container {    
     padding: 2rem;
 
-    width: clamp(22rem,11rem + 50vw,50rem);
-    background-color: hsla(197, 0%, 100%, 0.2);
+    width: clamp(12rem,11rem + 50vw,25rem);
+    background-color: hsla(197, 0%, 0%, 0.6);
     
     border: 1px solid hsla(197, 0%, 100%, 0.2);
-    box-shadow: 0 1.5rem 3.5rem hsla(197, 0%, 100%, 0.2);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     border-radius: 2rem;
 }
 
@@ -188,84 +176,89 @@ main {
     text-align: center;
 
     font-family: var(--ff-raleway);
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 
     color: #fff;
 }
 
 
-
-/* PROJECTS */
-
 .container-project-left {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
 
     display: flex;
 }
 
 .container-project-right {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
 
     display: flex;
     justify-content: flex-end;
 }
 
 .container-project-left + .container-project-right {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .card_project{
     padding: 2rem;
 
-    width: clamp(22rem,11rem + 50vw,100rem);
-    background-color: hsla(197, 0%, 100%, 0.2);
+    width: clamp(8rem,8rem + 50vw,62rem);
+    background-color: hsla(197, 0%, 0%, 0.2);
     
     border: 1px solid hsla(197, 0%, 100%, 0.2);
     border-radius: 10px;
 }
 
-.projectLeft {
-    box-shadow: 0 1.5rem 3.5rem hsla(197, 0%, 100%, 0.2);
+[data-CardLeft] {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-.projectRight {
-    box-shadow: 0 1.5rem 3.5rem hsla(197, 0%, 100%, 0.2);
+[data-CardRight] {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+[data-CardLeft]:hover, [data-CardRight]:hover {
+    background-color: hsla(197, 0%, 0%, 0.5);
+
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px, rgba(10, 37, 64, 0.5) 0px -2px 6px 0px inset;
 }
 
 .stage-title {
     text-align: center;
 
     font-family: var(--ff-raleway);
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
 
     color: #fff;
 }
 
 .description-stage {
-    margin-top: 2rem;
+    margin-top: 1.25rem;
 
     font-family: var(--ff-raleway);
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 
     color: #fff;
 }
+
+
 
 .openModal {
     display:block;
     margin-top: 2rem;
     padding: 0 2rem;
-    width: 15rem;
-
+    width: 11rem;
+    
     text-decoration: none;
 
     font-family: var(--ff-raleway);
-    font-size: 1.6rem;
+    font-size: .875rem;
 
     color: #fff;
     cursor: pointer;
@@ -309,9 +302,8 @@ main {
 
     inset: 5% 0;
     
-    border-radius: 2rem;
-
-    opacity: 0;
+    border-radius: 2rem 0 2rem 2rem;
+    background-color: rgba(255, 255, 255);
 
     transition: .5s;
 }
@@ -319,7 +311,7 @@ main {
 .modal.open {
     margin: 0 auto;
 
-    width: clamp(22rem, 22rem + 65vw ,80vw);
+    width: clamp(12rem, 22rem + 65vw ,80vw);
     max-height: 90vh;
 
     opacity: 1;
@@ -332,6 +324,8 @@ main {
     height: 75%;
 
     position: relative;
+    border-radius: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 3rem 6rem 1.5rem, rgba(0, 0, 0, 0.5) 0px 2rem 4rem -2rem, rgba(10, 37, 64, 0.5) 0px -2px 6px 0px inset;
 }
 
 .container_modal_project img {
@@ -343,23 +337,15 @@ main {
     width: 100%;
     height: 100%;
 
-    filter: invert(.2);
-
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     object-fit: cover;
 
     border: 2px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.4);
-
-    transition: all .5s;
 }
 
-.container_modal_project img:hover {
-    z-index: 0;
-    
-    filter: invert(0);
-
-    animation: moveImg .5s;
+.container_modal_project img:hover ~ .buttonsContainer{
+    z-index: 8;
+    animation: MoveBtn .5s;
 }
 
 .buttonsContainer {
@@ -375,18 +361,22 @@ main {
 }
 
 .buttonsContainer:hover {
-    z-index: 1;
+    z-index: 8;
+}
+
+.buttonsContainer:hover .container_modal_project{    
+    filter: invert(0);
 }
 
 .btn {
-    padding: 1rem 2rem;
+    padding: .675rem 1.25rem;
 
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #fff;
 
     border: 1px solid #fff;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
 
 }
 
@@ -422,10 +412,14 @@ main {
     color: white;
     position: absolute;
 
-    top: -2rem;
-    right: -3.5rem;
+    top: -.5rem;
+    right: -.5rem;
 
-    font-size: 4.8rem;
+    font-size: 1.5rem;
+    border: .25rem solid white;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .btn_close:hover {
@@ -433,34 +427,36 @@ main {
     border-radius: 50%;
 }
 
-@keyframes moveImg {
+@keyframes MoveBtn {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-2rem);
+        transform: translateY(2rem);
     }
     100% {
         transform: translateY(0);
     }
 }
 
+
 @media (max-width: 650px) {
-    .container_navigation {
-        padding: 4rem;
-    
+    header {
+        padding: 2rem 1rem;
+    }
+    .container_navigation {    
         justify-content: center;
-        gap: 2rem;
+        gap: 1.25rem;
     }
     
     .nav_link {
-        font-size: 1.4rem;
+        font-size: 0.75rem;
         font-weight: 400;
     }
     
     .title {
-        padding: 4rem;
-        font-size: 2.6rem;
+        padding: 2rem;
+        font-size: 1.5rem;
     }
     .modal {
         display: grid;
@@ -470,18 +466,107 @@ main {
         "THREE" 
         "FOUR";
         grid-template-columns: 1fr;
-        gap: 5rem;
+        gap: 3rem;
     
         position: fixed;
         width: 1vw;
-        padding: 2rem;
+        padding: 1.25rem;
     
         inset: 5% 0;
         
-        border-radius: 2rem;
+        border-radius: 1.25rem;
     
         opacity: 0;
     
         transition: .5s;
     }
+    
+    #About {
+        padding: 2rem;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+main {
+    scroll-behavior: smooth;
+}
+
+[data-dropdown] {
+    position: relative;
+}
+
+[data-dropdown] .dropdown-menu {
+    display: none;
+}
+
+[data-dropdown]:hover .dropdown-menu,
+[data-dropdown].ativo .dropdown-menu {
+    display: block;
+    animation: showDropDown .5s forwards;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    padding: 2px 20px;
+    border-radius: 5px;
+}
+
+.dropdown-menu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 50;
+    top: -10px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid rgb(255, 255, 255);;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+    color: white;
+    filter: contrast(.9)
+}
+
+.drop-downmenu {
+    display: grid;
+    gap: 8px;
+}
+
+
+@keyframes showDropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main::-webkit-scrollbar {
+    width: 10px;
+}
+
+main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: hsl(315, 100%, 40%);
+    border-radius: 10px
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background: hsl(105, 100%, 40%);
 }
