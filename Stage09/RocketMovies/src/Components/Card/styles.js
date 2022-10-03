@@ -28,7 +28,7 @@ export const Container = styled.div`
     }
 
     > p {
-        max-height: 3.5rem;
+        max-height: 2.5rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
 

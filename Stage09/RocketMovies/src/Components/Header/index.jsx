@@ -13,7 +13,7 @@ export function Header(){
                     <h1>Lucas Exposito Rocha</h1>
                     <button>Sair</button>
                 </div>
-                <Link>
+                <Link to="/profile">
                     <img src="https://github.com/lucasexprocha.png" alt="Foto de perfil do usuario" />
                 </Link>
             </div>

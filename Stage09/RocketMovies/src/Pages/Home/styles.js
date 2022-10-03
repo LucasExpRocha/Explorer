@@ -13,11 +13,9 @@ export const Container = styled.div`
 
 export const Main = styled.main`
     grid-area: Content;
-
-    height: 100%;
     overflow-y: auto;
 
-    padding: 3.25rem 7.5rem;
+    padding: 3rem 7.25rem;
 
     > div {
         display: flex;
@@ -43,12 +41,11 @@ export const Main = styled.main`
 
 export const Section = styled.section`
     margin-top: 2rem;
-    max-height: 45rem;
+    max-height: 44rem;
     overflow-y: auto;
 
-    div + div {
-        margin-top: 1.5rem;
-    }
+    display: grid;
+    gap: 1.5rem;
 
     &::-webkit-scrollbar {
         width: 8px;

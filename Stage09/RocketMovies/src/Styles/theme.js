@@ -11,7 +11,7 @@ export default {
       WHITE: "#F4EDE8",
       PINK: "#FF859B",
       PINK_LIGHT: "hsla(349, 100%, 76%, 0.05)",
-
+      BORDER: "#948F99",
   
       TEXT_TAG: "#E5E5E5",
       TEXT_CARD: "#999591",
