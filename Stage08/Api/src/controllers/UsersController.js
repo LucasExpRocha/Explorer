@@ -18,6 +18,7 @@ class UsersController {
         }
 
         const database = await sqliteConnection();
+        
         const checkUserExist = await database.get(`SELECT * FROM users WHERE email = (?)`, [email])
 
         if(checkUserExist) {
