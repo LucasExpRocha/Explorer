@@ -1,11 +1,11 @@
 const all_Links = document.querySelectorAll('.nav-link');
 
 const routes = {
-    '/Stage06/Desafio-SPA/index.html': './pages/init.html',
-    "/": "/Stage06/Desafio-SPA/pages/home.html",
-    "/universe": "./Stage06/Desafio-SPA/pages/universe.html",
-    "/exploration": "./Stage06/Desafio-SPA/pages/exploration.html",
-    404: "./Stage06/Desafio-SPA/pages/404.html"
+    '/index.html': './pages/init.html',
+    "/": "./pages/home.html",
+    "/universe": "./pages/universe.html",
+    "/exploration": "./pages/exploration.html",
+    404: "./pages/404.html"
 }
 
 function route (event){
