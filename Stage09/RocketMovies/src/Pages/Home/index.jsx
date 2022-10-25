@@ -23,7 +23,6 @@ export function Home(){
                     <Card />
                     <Card />
                     <Card />
-
                 </Section>
             </Main>
         </Container>

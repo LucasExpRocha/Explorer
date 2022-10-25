@@ -8,6 +8,6 @@ const userRoutes = Router()
 const userController = new UsersController();
 
 userRoutes.post('/', userController.createUser);
-userRoutes.put('/:id', userController.update);
+userRoutes.put('/', ensureAuthenticated, userController.update);
 
 module.exports = userRoutes;
