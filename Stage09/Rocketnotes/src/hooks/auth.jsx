@@ -24,7 +24,6 @@ function AuthProvider({children}){
                 alert(error.response.data.message)
             } else {
                 alert("Não foi possível entrar.")
-                console.log(email, password)
             }
         }
     }
@@ -34,6 +33,32 @@ function AuthProvider({children}){
         const token = localStorage.removeItem("@rocketnotes: token");
 
         setData({})
+    }
+
+    async function updateProfile({user, avatarFile}){
+        try {
+
+            if(avatarFile){
+                const fileUploadForm = new FormData();
+                fileUploadForm.append("avatar", avatarFile);
+
+                const response = await api.patch("/users/avatar", fileUploadForm)
+                user.avatar = response.data.avatar;
+            }
+
+            await api.put("/users", user);
+            localStorage.setItem("@rocketnotes:user", JSON.stringify(user))
+
+            setData({user, token:data.token})
+            alert("Perfil atualizado.")
+
+        } catch (error) {
+            if(error.response){
+                alert(error.response.data.message)
+            } else {
+                alert("Não foi possível atualizar o perfil.")
+            }
+        }
     }
 
     useEffect(() => {
@@ -51,7 +76,7 @@ function AuthProvider({children}){
     },[])
 
     return (
-        <AuthContext.Provider value={{ singIn, signOut, user: data.user }}>
+        <AuthContext.Provider value={{ singIn, signOut, updateProfile, user: data.user }}>
             {children}
         </AuthContext.Provider>
     )

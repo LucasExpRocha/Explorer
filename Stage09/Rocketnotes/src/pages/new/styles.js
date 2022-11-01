@@ -32,10 +32,5 @@ export const Form = styled.form`
         justify-content: space-between;
 
         margin-bottom: 2.25rem;
-
-        a {
-            font-size: 1.25rem;
-            color: ${({theme}) => theme.COLORS.GRAY_100};
-        }
     }
 `;
